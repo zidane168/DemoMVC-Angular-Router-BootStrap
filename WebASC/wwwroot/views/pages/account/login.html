@@ -1,0 +1,21 @@
+﻿<div class="col-md-12" ng-controller="loginCtrl">
+    <p><strong>{{title}}</strong></p>  
+    <form ng-submit="login()" class="form">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control"  ng-model="user.UserName" placeholder="UserName" required="" />
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control"  ng-model="user.PassWord" placeholder="PassWord" required="" />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">{{btnText}}</button>
+                <span class="text-danger" style="color:red">{{ error }}</span>
+            </div>
+
+        </div>
+    </form>
+
+</div>

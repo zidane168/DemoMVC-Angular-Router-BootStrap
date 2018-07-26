@@ -1,0 +1,23 @@
+﻿
+<div ng-controller="page1Ctrl">
+    <h1>Nội Dung Trang 1</h1>
+    Hello{{hello}}
+    <uib-tabset active="active">
+        <!-- // tab_2 -->
+        <uib-tab index="0" heading="Item_1">
+            <ui>
+                <li>
+                    nội dung
+                </li>
+            </ui>
+        </uib-tab>
+        <uib-tab index="1" heading="item_2">
+            <ui>
+                <li ng-repeat="item in NoiDung">
+                    {{item.text}}
+                </li>
+            </ui>
+        </uib-tab>
+
+    </uib-tabset>
+</div>
