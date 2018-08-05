@@ -1,4 +1,5 @@
-﻿
+﻿<!-- WRAPPER -->
+<div id="wrapper" class="wrapper">
 
     <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -9,36 +10,144 @@
                     <span class="icon-bar"> </span>
                 </button>
 
+                <a href="#" class="pull-left toggle-sidebar-collapse" style="margin-top: 15px"><i class="fa fa-bars"></i></a>
                 <a href="#" class="navbar-brand"> LOGO MEDIA </a>
+
             </div>
 
             <div class="navbar-collapse collapse">
-                <!-- related with data-toggle -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li> <a ui-sref=".page1"> Go to Main </a> </li>
-                    <li> <a ui-sref=".page2"> Go to Second </a> </li>
+                    <li> <a href="#header"> Home </a> </li>
+                    <li> <a href="#services"> Services </a> </li>
+                    <li> <a href="#pricing"> Pricing </a> </li>
+                    <li> <a href="#team"> Team </a> </li>
+                    <li> <a href="#client"> Client </a> </li>
+                    <li> <a href="#contact"> Contact </a> </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="sidebar" id="sidebar">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <uib-tabset active="activePill" vertical="true" type="pills">
-                        <a ui-sref=".page1" class="btn btn-primary"> Page 1 </a> <br />
+    <!-- END TOP BAR -->
+    <!-- END TOP BAR -->
+    <!-- LEFT SIDEBAR -->
+    <div id="left-sidebar" class="left-sidebar ">
+        <!-- main-nav -->
+        <div class="sidebar-scroll">
+            <nav class="main-nav">
+                <ul class="main-menu">
 
-                        <a ui-sref=".page2" class="btn btn-primary"> Page 2 </a>
+                    <li>
+                        <a href="#" class="js-sub-menu-toggle">
+                            <!--<a href="#" id="demo">-->
+                            <i class="fa fa-clipboard fa-fw"> </i>
+                            <span class="text">Dashboard <span class="badge element-bg-color-blue">New</span></span>
+                            <i class="toggle-icon fa fa-angle-left"></i>
+                        </a>
+                        <ul class="sub-menu ">
+                            <li><a href="nav-default-fixed.html"><span class="text">Default Fixed Sidebar</span></a></li>
+                            <li><a href="nav-normal.html"><span class="text">Normal Sidebar</span></a></li>
+                        </ul>
+                    </li>
 
-                    </uib-tabset>
-                </div>
-                <div class="col-md-9">
-                    <div ui-view> </div>
-                </div>
+
+                    <li>
+                        <a href="#" class="js-sub-menu-toggle">
+                            <i class="fa fa-clipboard fa-fw"></i><span class="text">Pages</span>
+                            <i class="toggle-icon fa fa-angle-left"></i>
+                        </a>
+                        <ul class="sub-menu ">
+                            <li><a href="page-profile.html"><span class="text">Profile</span></a></li>
+                            <li><a href="page-invoice.html"><span class="text">Invoice</span></a></li>
+                            <li><a href="page-knowledgebase.html"><span class="text">Knowledge Base</span></a></li>
+                            <li><a href="page-new-message.html"><span class="text">New Message</span></a></li>
+                            <li><a href="page-404.html"><span class="text">404</span></a></li>
+                            <li><a href="page-404-transparent.html"><span class="text">404 Transparent</span></a></li>
+                            <li><a href="page-blank.html"><span class="text">Blank Page</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-inbox.html"><i class="fa fa-envelope-o"></i><span class="text">Inbox <span class="badge red-bg">32</span></span></a></li>
+                    <li>
+                        <a href="#" class="js-sub-menu-toggle">
+                            <i class="fa fa-file"></i><span class="text">File Manager</span>
+                            <i class="toggle-icon fa fa-angle-left"></i>
+                        </a>
+                        <ul class="sub-menu ">
+                            <li><a href="page-file-manager.html"><span class="text">Default</span></a></li>
+                            <li><a href="page-file-manager-transparent.html"><span class="text">Transparent</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-projects.html"><i class="fa fa-briefcase"></i><span class="text">Projects</span></a></li>
+
+
+
+
+                    <li>
+                        <a href="#" class="js-sub-menu-toggle">
+                            <i class="fa fa-bars"></i>
+                            <span class="text">Menu Lvl 1</span>
+                            <i class="toggle-icon fa fa-angle-left"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="">
+                                <a href="#" class="js-sub-menu-toggle">
+                                    <span class="text">Menu Lvl 2</span>
+                                    <i class="toggle-icon fa fa-angle-left"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Menu Lvl 3</a></li>
+                                    <li><a href="#">Menu Lvl 3</a></li>
+                                    <li><a href="#">Menu Lvl 3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="text">Menu Lvl 2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /main-nav -->
+        </div>
+    </div>
+    <!-- END LEFT SIDEBAR -->
+    <!-- MAIN CONTENT WRAPPER -->
+    <div id="main-content-wrapper" class="content-wrapper ">
+        <!-- top general alert -->
+        <div class="alert alert-danger top-general-alert">
+            <span>If you <strong>can't see the logo</strong> on the top left, please reset the style on right style switcher (for upgraded theme only).</span>
+            <button type="button" class="close">&times;</button>
+        </div>
+        <!-- end top general alert -->
+        <div class="row">
+            <!-- link url -->
+            <div class="col-md-4 ">
+                <ul class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="#">Home</a></li>
+                    <li class="active">Dashboard</li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- main -->
+        <div class="content">
+            <div class="main-header">
+                <h2>DASHBOARD</h2>
+                <em>the first priority information</em>
+            </div>
+            <div class="main-content">
+
+
             </div>
         </div>
-
+        <!-- /main -->
+        <!-- FOOTER -->
+        <footer class="footer">
+            &copy; 2017 The Develovers
+        </footer>
+        <!-- END FOOTER -->
     </div>
-
-
+    <!-- END CONTENT WRAPPER -->
+</div>
