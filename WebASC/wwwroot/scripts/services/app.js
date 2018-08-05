@@ -2,7 +2,7 @@
 
 
 // var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
-var app = angular.module('app', [ 'ui.router']);
+var app = angular.module('app', ['ui.router']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
