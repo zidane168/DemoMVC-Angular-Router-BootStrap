@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html >
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,21 +22,26 @@
 
 
 
+
+
 </head>
-<body ng-app="app">
+<body  ng-app="app">
     <div class="container body-content">
         @RenderBody()
 
         <script src="~/wwwroot/scripts/acs-advance.js"></script>
 
-        <script src="~/Scripts/angular.min.js"></script>
+
+        <script src="~/Scripts/angular.js"></script> <!-- don't use min version when build web, because min version cannot detect if you have injects something ... not found -->
         <script src="~/Scripts/angular-ui-router.min.js"></script>
 
         <!-- vi.ly -->
-        <script src="~/wwwroot/scripts/services/app.js"></script>        
-        
+        <script src="~/wwwroot/scripts/services/app.js"></script>
+
         <script src="~/wwwroot/scripts/controllers/loginController.js"></script>
         <script src="~/wwwroot/scripts/controllers/DashboardController.js"></script>
+
+      
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
