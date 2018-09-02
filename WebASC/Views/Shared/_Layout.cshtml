@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html  ng-app="app" >
+<html ng-app="app">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,25 +24,94 @@
     <script src="~/Scripts/angular.js"></script> <!-- don't use min version when build web, because min version cannot detect if you have injects something ... not found -->
     <script src="~/Scripts/angular-ui-router.js"></script>
 
+    <script src="~/wwwroot/scripts/controllers/ControlCtrl.js"></script>
+
+    <style>
+        .row {
+            margin-bottom: 10px;
+        }
+
+        div.row > form {
+            margin-top: 20px;
+        }
+    </style>
+
 </head>
 <body>
-    <div class="container body-content">
+    <div class="container body-content" ng-controller="ControlCtrl">
         @RenderBody()
+        <form style="margin-top: 20px" name="fm" novalidate="novalidate">
+            <!-- textbox -->
+            <!-- type=number cho phép max = chiều dài 5 ký tự
+            giới hạn chữ số nhập: oninput
+            chỉ cho nhập số: onkeypress (không cho chữ e, mặc định type=number cho chữ e)
+            giá trị nhỏ nhất = 0  min="0"    -->
 
-        <script src="~/wwwroot/scripts/acs-advance.js"></script>
+            <div class="row">
+                <div style="width:100%; text-align:left" ng-show="fm.giaban.$error.required && fm.giaban.$dirty" class="btn btn-warning">
+                    Giá bán required!
+                </div>
+
+                <div style="width:100%; text-align:left" ng-show="fm.giaban.$error.minlength && fm.giaban.$dirty" class="btn btn-warning">
+                    chiều dài nhỏ nhất từ 4 ký tự trở lên!
+                </div>
+
+                <form style="margin-top: 20px" name="fm" novalidate="novalidate">
 
 
-        
-        <!-- vi.ly -->
-        <script src="~/wwwroot/scripts/services/app.js"></script>
+                    <input type="number"
+                           min="0"
+                           value="100"
+                           onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+                           oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                           ng-minlength="4"
+                           maxlength="5"
+                           required
+                           class="form-control"
+                           placeholder="4 to 8 characters long"
+                           ng-model="modelgiaban"
+                           name="giaban" />
 
-        <script src="~/wwwroot/scripts/controllers/loginController.js"></script>
-        <script src="~/wwwroot/scripts/controllers/DashboardController.js"></script>
+                    <button type="submit" class="btn btn-warning"> Nhập </button>
 
-      
 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            </div>
 
+
+
+
+            <!-- textbox -->
+            <!-- type=text chỉ cho phép nhập số thực và số nguyên   -->
+
+            <div class="row">
+
+                <number-only-input input-value="demoTextBoxModel.number"
+                                   input-name="demoTextBoxModel.name" />
+
+
+                <button type="submit" class="btn btn-warning"> Nhập </button>
+
+            </div>
+
+
+            <!-- textbox -->
+            <!-- type=text cho phép max = chiều dài 20 ký tự, và cho phép các ký tự 0-9 -->
+            <div class="row">
+                <input restrict-input="^[0-9-]*$" maxlength="20" type="text" class="form-control" />
+            </div>
+
+
+            <!-- textbox = datetime -->
+            <div class="row">
+                <input maxlength="20" type="date" class="form-control" ng-model="dateModel" />
+            </div>
+
+
+            <!------------- angular ui control -------------->
+            <div class="row">
+                <input name="email" ng-model="email" ui-validate="{blacklist : 'notBlackListed($value)' }">
+            </div>
+        </form>
     </div>
     @RenderSection("scripts", required: false)
 </body>

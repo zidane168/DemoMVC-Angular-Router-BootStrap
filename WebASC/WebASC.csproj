@@ -718,11 +718,14 @@
     <Content Include="Scripts\i18n\angular-locale_mt-mt.js" />
     <Content Include="Scripts\i18n\angular-locale_mt.js" />
     <Content Include="Scripts\i18n\angular-locale_mua-cm.js" />
+    <Content Include="Scripts\jquery.slimscroll.min.js" />
     <Content Include="wwwroot\css\acs.css" />
     <Content Include="wwwroot\css\custom.css" />
     <Content Include="wwwroot\css\login.css" />
     <Content Include="wwwroot\css\style.css" />
     <Content Include="wwwroot\scripts\acs-advance.js" />
+    <Content Include="wwwroot\scripts\acs.js" />
+    <Content Include="wwwroot\scripts\controllers\ControlCtrl.js" />
     <Content Include="wwwroot\scripts\controllers\DashboardController.js" />
     <Content Include="wwwroot\scripts\controllers\loginController.js" />
     <Content Include="wwwroot\scripts\controllers\page2Controller.js" />
@@ -731,6 +734,7 @@
     <Content Include="wwwroot\views\common\footer.html" />
     <Content Include="wwwroot\views\common\header.html" />
     <Content Include="wwwroot\views\pages\account\login.html" />
+    <Content Include="wwwroot\views\pages\ACS\control.html" />
     <Content Include="wwwroot\views\pages\ACS\Dashboard.html" />
     <Content Include="wwwroot\views\pages\ACS\page2.html" />
     <Content Include="wwwroot\views\pages\ACS\page1.html" />
