@@ -36,11 +36,19 @@
         }
     </style>
 
+
+
+    <script src="~/wwwroot/css/bootstrap-filestyle-2.1.0/src/bootstrap-filestyle.js"></script>
+
 </head>
 <body>
     <div class="container body-content" ng-controller="ControlCtrl">
         @RenderBody()
-        <form style="margin-top: 20px" name="fm" novalidate="novalidate">
+        <form style="margin-top: 20px" name="fm" novalidate="novalidate" enctype="multipart/form-data">
+
+
+
+
             <!-- textbox -->
             <!-- type=number cho phép max = chiều dài 5 ký tự
             giới hạn chữ số nhập: oninput
@@ -111,6 +119,50 @@
             <div class="row">
                 <input name="email" ng-model="email" ui-validate="{blacklist : 'notBlackListed($value)' }">
             </div>
+
+
+            <!---------- IMAGE ---------->
+            @*<button class="form-control"
+                        ng-file-select="onClickSelectFile($files, 2)"
+                        > Tải Lên </button>
+
+                <img class="form-group form-control"
+                     ng-src="{{imageSrc}}"
+                     ng-file-select="onClickSelectFile($files, 2)"
+                     ng-show="imageShow"
+                     ng-if=""
+                     />*@
+
+            @*<input type="file" ng-file-select="uploadImage($files)"
+                       id="fileInput" name="filedata" />
+                <img src="no_image.png" ng-click="triggerUpload()" class="image-holder" />*@
+
+
+            <input value="Chọn filllllllllle" type="file" ng-file-select="onFileSelect($files)" ng-model="imageSrc">
+
+
+            <img ng-src="{{imageSrc}}" width="200px" height="200px" />
+
+            <br />
+            Image base64:
+            <input type="text" value="" ng-model="imageSrc" style="width:100%" />
+
+
+            <!---------- IMAGE CACH 2 --------->
+            <input data-buttonText="Your label here" type="file" 
+                   ng-file-select="onFileSelect($files)" ng-model="imageSrc2">
+            <img ng-src="{{imageSrc2}}" width="200px" height="200px" />
+
+            <br />
+            <hr/>
+
+            <input type="button" id="loadFileXml" value="Chọn File Ảnh" onclick="document.getElementById('file3').click();" />
+            <input type="file" style="display:none;" id="file3" name="file"   
+                   ng-file-select="onFileSelect($files)"  ng-model="imageSrc3" />
+            <img ng-src="{{imageSrc3}}" width="200px" height="200px" />
+
+            <input type="text" value="" ng-model="imageSrc3" style="width:100%" />
+
         </form>
     </div>
     @RenderSection("scripts", required: false)
